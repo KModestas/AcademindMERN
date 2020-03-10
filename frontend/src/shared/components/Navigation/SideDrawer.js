@@ -1,12 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import './SideDrawer.css';
+import './SideDrawer.css'
 
 const SideDrawer = props => {
-  const content = <aside className="side-drawer">{props.children}</aside>;
+	const content = <aside className='side-drawer'>{props.children}</aside>
 
-  return ReactDOM.createPortal(content, document.getElementById('drawer-hook'));
-};
+	// A react portal allows you to render React elements in other areas of the HTML page aside from the 'root' element
+	return ReactDOM.createPortal(content, document.getElementById('drawer-hook'))
+}
 
-export default SideDrawer;
+export default SideDrawer
